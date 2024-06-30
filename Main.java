@@ -14,21 +14,18 @@ public class Main {
     while (option != 6) {
       float result = 0;
       System.out.println("Calculadora - MAPA TOC II");
-      System.out.println("Escolha a opcao: 1 -Adicao 2 -Subtracao 3 -Multiplicacao 4-Divisao 5-Sair");
+      System.out.println("Escolha a opcao: 1 -Adicao 2 -Subtracao 3 -Multiplicacao 4-Divisao 5-Potenciacao 6-Sair");
       option = sc.nextInt();
-      
-      if (option == 5) {
-        System.exit(0);
-      }
 
-      if (option > 5) {
+      if (option > 6 || option < 1) {
         System.out.println("Opcao invalida");
         continue;
-      } // if (option > 5
+      }
 
       System.out.println("Digite o primeiro numero");
       float firstNumber = sc.nextFloat();
       System.out.println("Digite o segundo numero");
+
       float secondNumber = sc.nextFloat();
       switch (option) {
         case 1:
@@ -42,6 +39,9 @@ public class Main {
           break;
         case 4:
           result = clt.calculateDivide(firstNumber, secondNumber);
+          break;
+        case 5:
+          result = clt.calculatePow(firstNumber, secondNumber);
           break;
         default:
           break;
