@@ -22,6 +22,11 @@ public class Main {
         continue;
       }
 
+      if(option == 6) {
+        System.out.println("Saindo...");
+        break;
+      }
+
       System.out.println("Digite o primeiro numero");
       float firstNumber = sc.nextFloat();
       System.out.println("Digite o segundo numero");
